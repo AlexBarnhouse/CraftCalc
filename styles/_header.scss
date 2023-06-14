@@ -1,0 +1,73 @@
+.header {
+    background-color: $bgr-black;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.menu-item {
+    @include header-font(18px, 700, 33px);
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: $white;
+    padding: 13px 25px;
+    transition: 0.2s;
+
+    &:hover {
+        color: $golden;
+    }
+}
+
+.submenu {
+    background-color: $bgr-black;
+    z-index: 5;
+
+    & li {
+        position: relative;
+        transition: 0.2s;
+    }
+
+    & li:hover {
+        background-color: $bgr-golden;
+    }
+
+    .submenu-item {
+        @include header-font(14px, 400, 24px);
+        display: block;
+
+        text-decoration: none;
+        color: $white;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+
+}
+
+.l1 {
+    position: absolute;
+    top: 59px;
+    left: 20px;
+    display: none;
+}
+
+.l2 {
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    display: none;
+}
+
+.menu li:hover>.submenu {
+    display: block;
+}
+
+.l1 li:has(.l2 li:hover) {
+    background-color: $bgr-golden;
+}

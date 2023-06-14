@@ -1,0 +1,157 @@
+/*Hide input type number arrows 
+Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Hide input type number arrows
+Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.recipe-title {
+    @include content-font(26px, 700, 38px);
+    color: $white;
+}
+
+.recipe-img {
+
+    position: relative;
+
+    .recipe-grade-img {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+}
+
+.recipe-box {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    margin-top: 90px;
+}
+
+.recipe-box-leftside {
+    flex-basis: 53%;
+
+    .leftside-unit {
+        display: grid;
+        grid-template-columns: 55% 10% 15% 17%;
+        column-gap: 1%;
+    }
+}
+
+.recipe-box-rightside {
+    flex-basis: 45%;
+
+    .rightside-unit {
+        display: grid;
+        grid-template-columns: 50% 20% 26%;
+        column-gap: 2%;
+    }
+
+
+}
+
+.recipe-box-title {
+    @include content-font(16px, 700, 19px);
+    padding-bottom: 9px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.recipe-box-row {
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $border-bottom;
+
+    .recipe-resource-card {
+        display: flex;
+
+        .recipe-resource-card-name {
+            @include content-font(11px, 700, 16px);
+            align-self: center;
+            margin-left: 10px;
+        }
+    }
+
+    .recipe-resource-qty {
+        @include content-font(14px, 700, 19px);
+        align-self: center;
+    }
+
+    .recipe-resource-input {
+        @include content-font(14px, 700, 19px);
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $white;
+        color: $white;
+        text-align: right;
+    }
+
+    .recipe-resource-need {
+        @include content-font(14px, 700, 19px);
+        align-self: center;
+        text-align: center;
+    }
+
+    .recipe-resource-total-price {
+        @include content-font(14px, 700, 19px);
+        align-self: center;
+        text-align: right;
+    }
+}
+
+.sub-recipe-box-rows .recipe-resource-card {
+    margin-left: 15px;
+}
+
+.awesome-ico {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: $white;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.recipe-price-box {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+
+    .recipe-price-unit {
+        flex-basis: 44%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .recipe-price-title {
+        @include content-font(16px, 700, 19px);
+        color: $white;
+    }
+
+    .recipe-price {
+        @include content-font(14px, 700, 19px);
+        color: $white;
+    }
+}

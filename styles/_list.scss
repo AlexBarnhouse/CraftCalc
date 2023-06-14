@@ -1,0 +1,47 @@
+.list-title {
+    @include content-font(26px, 700, 38px);
+    color: $white;
+}
+
+.grade-box {
+    margin-top: 30px;
+}
+
+.grade-name {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    @include content-font(20px, 700, 23px);
+    color: $white;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.items-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.item {
+    display: flex;
+    flex-basis: 50%;
+    max-width: 460px;
+    margin-top: 20px;
+    padding-bottom: 9px;
+    padding-left: 5px;
+    border-bottom: 1px solid $border-bottom;
+}
+
+.item-name {
+    display: block;
+    text-decoration: none;
+    @include content-font(14px, 700, 32px);
+    color: $white;
+    padding-left: 30px;
+    flex-grow: 1;
+
+    &:hover {
+        color: $golden;
+    }
+}
